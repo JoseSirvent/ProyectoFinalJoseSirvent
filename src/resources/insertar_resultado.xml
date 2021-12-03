@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+	<alumnos_tbl nombre="Jose" id="003" edad="20" email="sirvent18@gmail.com"/>
+	<alumnos_tbl nombre="Marcos" id="783" edad="17" email="marcos17@gmail.com"/>
+	<alumnos_tbl nombre="Santiago" id="398" edad="22" email="santiago22@gmail.com"/>
+	<alumnos_tbl nombre="Pedro" id="008" edad="29" email="pedro29@gmail.com"/>
+</dataset>

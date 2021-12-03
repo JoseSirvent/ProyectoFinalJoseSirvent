@@ -1,0 +1,29 @@
+##Seleccionamos el lenguaje
+language: java
+sudo: enabled
+
+##Seleccionamos los servicios, en este caso es para las pruebas de mern y de sql
+services:
+    - xvfb 
+    - mysql
+
+##Ambiente de travis
+env:
+    global:
+     - TRAVIS=true
+
+##Seleccionamos todo lo necesario para antes de la instalacion
+before_install:
+
+  - sudo apt-get update
+  - sudo apt-get install dbus-x11
+
+  - export DISPLAY=:99.0
+  - sleep 3
+
+  - export CHROME_BIN=/usr/bin/google-chrome
+  - sudo apt-get install -y libappindicator1 fonts-liberation
+  - wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+  - sudo dpkg -i google-chrome*.deb
+
+  - mysql -u root --password="" < sqldata/dump.sql
